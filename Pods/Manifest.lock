@@ -1,15 +1,22 @@
 PODS:
-  - WCDB (1.0.3)
+  - WCDB (1.0.6):
+    - WCDB/sqlcipher (= 1.0.6)
+  - WCDB/sqlcipher (1.0.6)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
-  - WCDB (~> 1.0.3)
+  - WCDB (~> 1.0.6)
   - YYModel
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - WCDB
+    - YYModel
+
 SPEC CHECKSUMS:
-  WCDB: 1f32cb4d3fa59ec36afdf827614e9f014fa5bce4
+  WCDB: 4d2926bf695b2e00d785b50afd32c2dcc8cbbd98
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 184a3fa03a804d28702c9f2c4f9281e757eb6bb8
+PODFILE CHECKSUM: 861130d5bbc833281eb4a91913398c875ed9905f
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.3

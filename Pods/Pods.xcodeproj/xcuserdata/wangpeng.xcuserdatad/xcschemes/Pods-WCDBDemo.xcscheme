@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'DCCB64F67D13F11CEE264C4C3C7486CD'
-               BlueprintName = 'Pods-WCDBDemo'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-WCDBDemo.a'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "022338115472013249850EB47AC1D8CE"
+               BlueprintName = "Pods-WCDBDemo"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "libPods-WCDBDemo.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

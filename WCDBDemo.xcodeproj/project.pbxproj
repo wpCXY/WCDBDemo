@@ -18,6 +18,8 @@
 		AA26CB151F284F40005161E4 /* WPUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AA26CB141F284F40005161E4 /* WPUserModel.m */; };
 		AA26CB181F285022005161E4 /* WPUserModel+WCTTableCoding.mm in Sources */ = {isa = PBXBuildFile; fileRef = AA26CB171F285022005161E4 /* WPUserModel+WCTTableCoding.mm */; };
 		AA26CB1B1F286E60005161E4 /* WPUserDBManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = AA26CB1A1F286E60005161E4 /* WPUserDBManager.mm */; };
+		AA9D831F2111BD16001FC09E /* WPModelA.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9D831E2111BD16001FC09E /* WPModelA.m */; };
+		AA9D83222111BD22001FC09E /* WPModelB.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9D83212111BD22001FC09E /* WPModelB.m */; };
 		EB4871D5389F0D949BB382C9 /* libPods-WCDBDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F193F516254BB71925C38D8D /* libPods-WCDBDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,10 @@
 		AA26CB171F285022005161E4 /* WPUserModel+WCTTableCoding.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "WPUserModel+WCTTableCoding.mm"; sourceTree = "<group>"; };
 		AA26CB191F286E60005161E4 /* WPUserDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPUserDBManager.h; sourceTree = "<group>"; };
 		AA26CB1A1F286E60005161E4 /* WPUserDBManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = WPUserDBManager.mm; sourceTree = "<group>"; };
+		AA9D831D2111BD16001FC09E /* WPModelA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WPModelA.h; sourceTree = "<group>"; };
+		AA9D831E2111BD16001FC09E /* WPModelA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WPModelA.m; sourceTree = "<group>"; };
+		AA9D83202111BD22001FC09E /* WPModelB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WPModelB.h; sourceTree = "<group>"; };
+		AA9D83212111BD22001FC09E /* WPModelB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WPModelB.m; sourceTree = "<group>"; };
 		F193F516254BB71925C38D8D /* libPods-WCDBDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WCDBDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -135,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				AA26CB121F284F24005161E4 /* Model */,
+				AA9D831B2111BCF4001FC09E /* ModelAContainModelB */,
+				AA9D831C2111BCF4001FC09E /* ModelAContainModelBS */,
 				AA26CAE11F283777005161E4 /* AppDelegate.h */,
 				AA26CAE21F283777005161E4 /* AppDelegate.m */,
 				AA26CAE41F283777005161E4 /* ViewController.h */,
@@ -187,6 +195,24 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		AA9D831B2111BCF4001FC09E /* ModelAContainModelB */ = {
+			isa = PBXGroup;
+			children = (
+				AA9D831D2111BD16001FC09E /* WPModelA.h */,
+				AA9D831E2111BD16001FC09E /* WPModelA.m */,
+				AA9D83202111BD22001FC09E /* WPModelB.h */,
+				AA9D83212111BD22001FC09E /* WPModelB.m */,
+			);
+			path = ModelAContainModelB;
+			sourceTree = "<group>";
+		};
+		AA9D831C2111BCF4001FC09E /* ModelAContainModelBS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelAContainModelBS;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -198,8 +224,6 @@
 				AA26CAD71F283777005161E4 /* Sources */,
 				AA26CAD81F283777005161E4 /* Frameworks */,
 				AA26CAD91F283777005161E4 /* Resources */,
-				BD81C1DD5FF14F47FE5D05D3 /* [CP] Embed Pods Frameworks */,
-				FAD45F8F73E1BA08C1900F1D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -329,43 +353,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WCDBDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		BD81C1DD5FF14F47FE5D05D3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCDBDemo/Pods-WCDBDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FAD45F8F73E1BA08C1900F1D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCDBDemo/Pods-WCDBDemo-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -381,6 +378,8 @@
 				AA26CAE01F283777005161E4 /* main.m in Sources */,
 				AA26CB181F285022005161E4 /* WPUserModel+WCTTableCoding.mm in Sources */,
 				AA26CB151F284F40005161E4 /* WPUserModel.m in Sources */,
+				AA9D83222111BD22001FC09E /* WPModelB.m in Sources */,
+				AA9D831F2111BD16001FC09E /* WPModelA.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
