@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "WPModelB.h"
 @interface WPModelA : NSObject
-
+@property (nonatomic, copy)   NSString *aId;
+@property (nonatomic, copy)   NSString *other;
+@property (nonatomic, strong) WPModelB *modelB;
 @end

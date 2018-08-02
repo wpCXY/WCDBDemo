@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface WPModelB : NSObject
+@property (nonatomic, copy) NSString *aId;
+@property (nonatomic, copy) NSString *bId;
+@property (nonatomic, copy) NSString *something;
 
 @end
