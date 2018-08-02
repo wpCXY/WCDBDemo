@@ -23,6 +23,10 @@
 		AA9D83252111BE69001FC09E /* WPModelA+WPWCTTableCoding.mm in Sources */ = {isa = PBXBuildFile; fileRef = AA9D83242111BE69001FC09E /* WPModelA+WPWCTTableCoding.mm */; };
 		AA9D83282111BE80001FC09E /* WPModelB+WPWCTTableCoding.mm in Sources */ = {isa = PBXBuildFile; fileRef = AA9D83272111BE80001FC09E /* WPModelB+WPWCTTableCoding.mm */; };
 		AA9D832B2111C18F001FC09E /* WPADBManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = AA9D832A2111C18F001FC09E /* WPADBManager.mm */; };
+		AA9D832E2112AC2F001FC09E /* WPModelC.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9D832D2112AC2F001FC09E /* WPModelC.m */; };
+		AA9D83312112AC3D001FC09E /* WPModelD.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9D83302112AC3D001FC09E /* WPModelD.m */; };
+		AA9D83342112AEF8001FC09E /* WPModelC+WCTTableCoding.mm in Sources */ = {isa = PBXBuildFile; fileRef = AA9D83332112AEF8001FC09E /* WPModelC+WCTTableCoding.mm */; };
+		AA9D83372112AF9B001FC09E /* WPCDBManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = AA9D83362112AF9B001FC09E /* WPCDBManager.mm */; };
 		EB4871D5389F0D949BB382C9 /* libPods-WCDBDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F193F516254BB71925C38D8D /* libPods-WCDBDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +82,14 @@
 		AA9D83272111BE80001FC09E /* WPModelB+WPWCTTableCoding.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "WPModelB+WPWCTTableCoding.mm"; sourceTree = "<group>"; };
 		AA9D83292111C18F001FC09E /* WPADBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WPADBManager.h; sourceTree = "<group>"; };
 		AA9D832A2111C18F001FC09E /* WPADBManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = WPADBManager.mm; sourceTree = "<group>"; };
+		AA9D832C2112AC2F001FC09E /* WPModelC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WPModelC.h; sourceTree = "<group>"; };
+		AA9D832D2112AC2F001FC09E /* WPModelC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WPModelC.m; sourceTree = "<group>"; };
+		AA9D832F2112AC3D001FC09E /* WPModelD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WPModelD.h; sourceTree = "<group>"; };
+		AA9D83302112AC3D001FC09E /* WPModelD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WPModelD.m; sourceTree = "<group>"; };
+		AA9D83322112AEF8001FC09E /* WPModelC+WCTTableCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WPModelC+WCTTableCoding.h"; sourceTree = "<group>"; };
+		AA9D83332112AEF8001FC09E /* WPModelC+WCTTableCoding.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "WPModelC+WCTTableCoding.mm"; sourceTree = "<group>"; };
+		AA9D83352112AF9B001FC09E /* WPCDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WPCDBManager.h; sourceTree = "<group>"; };
+		AA9D83362112AF9B001FC09E /* WPCDBManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = WPCDBManager.mm; sourceTree = "<group>"; };
 		F193F516254BB71925C38D8D /* libPods-WCDBDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WCDBDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -151,7 +163,7 @@
 			children = (
 				AA26CB121F284F24005161E4 /* Model */,
 				AA9D831B2111BCF4001FC09E /* ModelAContainModelB */,
-				AA9D831C2111BCF4001FC09E /* ModelAContainModelBS */,
+				AA9D831C2111BCF4001FC09E /* ModelCContainModelDs */,
 				AA26CAE11F283777005161E4 /* AppDelegate.h */,
 				AA26CAE21F283777005161E4 /* AppDelegate.m */,
 				AA26CAE41F283777005161E4 /* ViewController.h */,
@@ -221,11 +233,19 @@
 			path = ModelAContainModelB;
 			sourceTree = "<group>";
 		};
-		AA9D831C2111BCF4001FC09E /* ModelAContainModelBS */ = {
+		AA9D831C2111BCF4001FC09E /* ModelCContainModelDs */ = {
 			isa = PBXGroup;
 			children = (
+				AA9D832C2112AC2F001FC09E /* WPModelC.h */,
+				AA9D832D2112AC2F001FC09E /* WPModelC.m */,
+				AA9D83322112AEF8001FC09E /* WPModelC+WCTTableCoding.h */,
+				AA9D83332112AEF8001FC09E /* WPModelC+WCTTableCoding.mm */,
+				AA9D832F2112AC3D001FC09E /* WPModelD.h */,
+				AA9D83302112AC3D001FC09E /* WPModelD.m */,
+				AA9D83352112AF9B001FC09E /* WPCDBManager.h */,
+				AA9D83362112AF9B001FC09E /* WPCDBManager.mm */,
 			);
-			path = ModelAContainModelBS;
+			path = ModelCContainModelDs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,11 +407,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA9D832E2112AC2F001FC09E /* WPModelC.m in Sources */,
 				AA26CB1B1F286E60005161E4 /* WPUserDBManager.mm in Sources */,
+				AA9D83342112AEF8001FC09E /* WPModelC+WCTTableCoding.mm in Sources */,
 				AA26CAE61F283777005161E4 /* ViewController.m in Sources */,
 				AA26CAE31F283777005161E4 /* AppDelegate.m in Sources */,
 				AA26CAE01F283777005161E4 /* main.m in Sources */,
+				AA9D83312112AC3D001FC09E /* WPModelD.m in Sources */,
 				AA9D83282111BE80001FC09E /* WPModelB+WPWCTTableCoding.mm in Sources */,
+				AA9D83372112AF9B001FC09E /* WPCDBManager.mm in Sources */,
 				AA26CB181F285022005161E4 /* WPUserModel+WCTTableCoding.mm in Sources */,
 				AA26CB151F284F40005161E4 /* WPUserModel.m in Sources */,
 				AA9D83252111BE69001FC09E /* WPModelA+WPWCTTableCoding.mm in Sources */,
