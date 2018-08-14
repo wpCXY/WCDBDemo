@@ -10,9 +10,11 @@
 #import "WPUserDBManager.h"
 #import "WPADBManager.h"
 #import "WPCDBManager.h"
+#import "WPBossDBManager.h"
 #import <YYModel.h>
 
 @interface ViewController ()
+@property (nonatomic, strong) WPBossDBManager *bossDBManager;
 @property (nonatomic, strong) WPADBManager *aDBManager;
 @property (nonatomic, strong) WPCDBManager *cDBManager;
 @end
@@ -22,13 +24,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _bossDBManager = [WPBossDBManager defaultManager];
+    [self insertBossModel];
+//    [self getBossModel];
+//    [self deleteBossModel];
+//    [self getBossModel];
+
 //    _aDBManager = [WPADBManager defaultManager];
 //    [self insertModelA];
 //    [self getModelA];
 //    [self deleteModelA];
 //    [self getModelA];
     
-    _cDBManager = [WPCDBManager defaultManager];
+//    _cDBManager = [WPCDBManager defaultManager];
 //    [self insertModelC];
 //    [self getModelC];
 //    [self deleteModelC];
@@ -38,7 +46,31 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-#pragma mark - TestADBManager 模型A嵌套模型B 一对一
+#pragma mark - 模型嵌套-自定义类型
+- (void)insertBossModel {
+    WPBossModel *boss = [WPBossModel new];
+    boss.name = @"name";
+    WPWorkerModel *worker = [WPWorkerModel new];
+    worker.name = @"workname";
+    worker.skill = @"eat";
+    boss.worker = worker;
+    [_bossDBManager insertBoss:boss];
+    
+}
+- (void)getBossModel {
+    WPBossModel *boss = [_bossDBManager getBossWithBoosName:@"name"];
+    NSLog(@"%@",boss);
+}
+- (void)deleteBossModel{
+    BOOL res = [_bossDBManager deletBossWithBossName:@"name"];
+    if (res) {
+        NSLog(@"删除ModelA成功！");
+    } else{
+        NSLog(@"删除ModelA失败！");
+    }
+}
+
+#pragma mark - 模型嵌套-分存多表
 - (void)insertModelA {
     WPModelA *modelA = [WPModelA new];
     modelA.aId = @"aaaa";
@@ -63,7 +95,7 @@
         NSLog(@"删除ModelA失败！");
     }
 }
-#pragma mark - TestCDBManager 模型C嵌套多个模型D 一对多
+#pragma mark - 模型嵌套-子模型转jsonStr保存
 - (void)insertModelC {
     WPModelC *modelc = [WPModelC new];
     modelc.cId = @"cccc";
